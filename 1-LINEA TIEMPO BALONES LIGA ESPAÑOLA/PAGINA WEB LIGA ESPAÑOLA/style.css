@@ -1,0 +1,67 @@
+body{
+	font-family: Arial;
+	background-image: url('fondo.jpg');
+}
+
+h1{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+	color: #333333;
+}
+
+#resultados, #clasificacion, #equipos{
+	margin: 20px;
+	background-color: #FFFFFF;
+	padding: 20px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 10px #333333;
+	-webkit-box-shadow: 0 0 10px #333333;
+	box-shadow: 0 0 10px #333333;
+}
+
+#resultados-tabla, #clasificacion-tabla{
+	margin: 0 auto;
+	width: 90%;
+	border-collapse: collapse;
+}
+
+#resultados-tabla table, #clasificacion-tabla table{
+	width: 100%;
+}
+
+#resultados-tabla th, #clasificacion-tabla th{
+	background-color: #333333;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#resultados-tabla tr, #clasificacion-tabla tr{
+	background-color: #F2F2F2;
+	border-bottom: 1px solid #333333;
+}
+
+#resultados-tabla td, #clasificacion-tabla td{
+	padding: 10px;
+}
+
+#equipos-lista{
+	margin: 0 auto;
+	width: 90%;
+	list-style-type: none;
+	background-image: url('equipos.jpg');
+	background-position: 2px 1px;
+	background-repeat: no-repeat;
+	padding: 10px;
+	margin-left: 20px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 10px #333333;
+	-webkit-box-shadow: 0 0 10px #333333;
+	box-shadow: 0 0 10px 
+#333333;
+}
+
+#equipos-lista li{
+	padding-left: 10px;
+}

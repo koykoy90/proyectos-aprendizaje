@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liga de Futbol Española</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.getJSON("https://www.api-football.com/demo/api/v2/leagueTable/2", function(data) { 
+				$.each(data.api.standings[0], function(key, value){ 
+					$("#table").append("<tr><td>" + value.rank + "</td><td>" + value.team + "</td><td>" + value.all.matchs_played + "</td><td>" + value.all.win + "</td><td>" + value.all.draw + "</td><td>" + value.all.lose + "</td></tr>");
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Liga de Futbol Española</h1>
+	<div id="resultados">
+		<h2>Resultados</h2>
+		<div id="resultados-tabla">
+			<table>
+				<thead>
+					<tr>
+						<th>Equipo</th>
+						<th>Resultado</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Real Madrid</td>
+						<td>2 - 1</td>
+					</tr>
+					<tr>
+						<td>Barcelona</td>
+						<td>1 - 0</td>
+					</tr>
+					<tr>
+						<td>Atletico Madrid</td>
+						<td>1 - 1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div id="clasificacion">
+		<h2>Clasificación</h2>
+		<div id="clasificacion-tabla">
+			<table>
+				<thead>
+					<tr>
+						<th>Posición</th>
+						<th>Equipo</th>
+						<th>PJ</th>
+						<th>G</th>
+						<th>E</th>
+						<th>P</th>
+					</tr>
+				</thead>
+				<tbody id="table"></tbody>
+			</table>
+		</div>
+	</div>
+	<div id="equipos">
+		<h2>Equipos</h2>
+		<div id="equipos-lista">
+			<ul>
+				<li>Real Madrid</li>
+				<li>Barcelona</li>
+				<li>Atletico Madrid</li>
+				<li>Valencia</li>
+				<li>Sevilla</li>
+				<li>Villarreal</li>
+				<li>Athletic Bilbao</li>
+				<li>Real Betis</li>
+				<li>Eibar</li>
+				<li>Celta Vigo</li>
+				<li>Leganes</li>
+				<li>Getafe</li>
+				<li>Girona</li>
+				<li>Levante</li>
+				<li>Alaves</li>
+				<li>Espanyol</li>
+				<li>Real Sociedad</li>
+				<li>Las Palmas</li>
+				<li>Deportivo La Coruña</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
